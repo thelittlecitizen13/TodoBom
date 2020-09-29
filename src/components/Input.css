@@ -8,11 +8,26 @@
     padding: 3px 10px;
 }
 .addButton{
-    background: white;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-    font-size: 15px;
-    margin-bottom: 6px;
-    margin-top:6px;
-    padding: 3px 10px;
-}
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.1em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    font-size: 1em;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;}
+  
+  .addButton:hover{
+    background-color:#4095c6;
+  }
+
+  .todoText{
+    font-weight:300;
+    font-size: 1.3em;
+    color: black;
+    font-weight: bold;
+  }

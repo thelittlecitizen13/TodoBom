@@ -11,7 +11,8 @@ export default function ToDoItem(props) {
     return (
 
         <div className="todo" name={props.itemIndex}>
-            <input type="checkbox" onClick={() => dispatch(checkItem(toDoList, props.itemIndex))}/>
+            <input type="checkbox" className="checkTodo"
+            onClick={() => dispatch(checkItem(toDoList, props.itemIndex))}/>
             {props.children}
             <button type="button"
             className="removeButton"
