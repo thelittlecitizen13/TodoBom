@@ -3,37 +3,32 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Input from './components/Input';
 import ToDoItem from './components/ToDoItem';
+import { useSelector, useDispatch } from 'react-redux';
+import {addItem, removeItem} from './actions';
 
 function App() {
 
+  const toDoList = useSelector(state => state.list);
+  const dispatch = useDispatch();
   const [toDos, setToDos] = useState({data: []});
   const [currentToDo, setcurrentToDo] = useState();
   function createToDo(data)
   {
-      
-      
-      // var listDiv = document.getElementById('List'); //ListRef.value;
-      // var todoRecord = React.createElement('p', null, "hello");
-      // ReactDOM.render(todoRecord, listDiv);
-      var newToDos = [data, ...toDos.data];
-      setToDos({data: newToDos});
-      console.log('z')
-      
+      dispatch(addItem(data));
   }
 
   function createList() {
     var components = [];
-    for (var i = 0; i<toDos.data.length; i++) {
+    for (var i = 0; i<toDoList.length; i++) {
       var component = 
-      <ToDoItem>
-        {toDos.data[i]}
+      <ToDoItem itemIndex={i}>
+        {toDoList[i].todo}
       </ToDoItem>
       components.push(component);
       
     }
     var list = React.createElement('div', {}, components);
     return list;
-//{toDos.data.map(x => <p>{x}</p>)}
   }
 
   return (
