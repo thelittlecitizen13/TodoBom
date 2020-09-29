@@ -6,8 +6,12 @@ export default function Input(props) {
     const inputRef = useRef(null);
     function handleClick()
     {
-        props.handleClick(inputRef.current.value);
-        inputRef.current.value = '';
+        if ( inputRef.current.value !=='')
+        {
+            props.handleClick(inputRef.current.value);
+            inputRef.current.value = '';
+        }
+        
     }
     return (
         <div>
