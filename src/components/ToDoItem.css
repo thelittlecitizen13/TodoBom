@@ -8,12 +8,12 @@
     font-family:'Roboto',sans-serif;
     font-weight:300;
     color:#FFFFFF;
-    background-color:#4eb5f1;
+    background-color:#ff0e0e;
     text-align:center;
     transition: all 0.2s;}
 
 .removeButton:hover{
-    background-color:#4095c6;
+    background-color:#7a0101;
 }
 
 .todo {
@@ -32,7 +32,7 @@
 }
 
 /* Create a custom checkbox */
-.checkmark {
+.checkTodo {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,12 +42,12 @@
   }
   
   /* On mouse-over, add a grey background color */
-  .div:hover input ~ .checkTodo {
+  .container:hover input ~ .checkTodo {
     background-color: #ccc;
   }
   
   /* When the checkbox is checked, add a blue background */
-  .div input:checked ~ .checkTodo {
+  .container input:checked ~ .checkTodo {
     background-color: #2196F3;
   }
   
@@ -59,12 +59,12 @@
   }
   
   /* Show the checkmark when checked */
-  .div input:checked ~ .checkTodo:after {
+  .container input:checked ~ .checkTodo:after {
     display: block;
   }
   
   /* Style the checkmark/indicator */
-  .div .checkTodo:after {
+  .container .checkTodo:after {
     left: 9px;
     top: 5px;
     width: 5px;

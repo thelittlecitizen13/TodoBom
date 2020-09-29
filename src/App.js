@@ -1,5 +1,4 @@
-import React, {useRef, useState} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import './App.css';
 import Input from './components/Input';
 import ToDoItem from './components/ToDoItem';

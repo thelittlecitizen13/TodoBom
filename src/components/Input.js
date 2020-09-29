@@ -2,7 +2,6 @@ import React, {useState, useRef} from 'react'
 import './Input.css'
 
 export default function Input(props) {
-    const [state, setstate] = useState("");
     const inputRef = useRef(null);
     function handleClick()
     {
