@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import {addItem, removeItem} from '../actions';
+import {removeItem, checkItem} from '../actions';
 
 export default function ToDoItem(props) {
 
@@ -8,11 +8,14 @@ export default function ToDoItem(props) {
     const dispatch = useDispatch();
 
     return (
+
         <div name={props.itemIndex}>
+            <input type="checkbox" onClick={() => dispatch(checkItem(toDoList, props.itemIndex))}/>
             {props.children}
-            <button type="button" value='X' 
+            <button type="button"
             onClick = {() => 
-            dispatch(removeItem(toDoList, props.itemIndex))}/>
+            dispatch(removeItem(toDoList, props.itemIndex))}>
+                X</button>
         </div>
     )
 }

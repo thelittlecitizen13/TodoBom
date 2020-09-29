@@ -15,3 +15,12 @@ export const removeItem = (list , index) =>{
         payload: itemToRemove
     }    
 }
+
+export const checkItem = (list , index) =>{
+    let itemToCheck = list[index];
+    console.log(itemToCheck);
+    return {
+        type: 'CHECKITEM',
+        payload: itemToCheck
+    }    
+}

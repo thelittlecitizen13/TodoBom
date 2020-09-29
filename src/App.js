@@ -10,8 +10,6 @@ function App() {
 
   const toDoList = useSelector(state => state.list);
   const dispatch = useDispatch();
-  const [toDos, setToDos] = useState({data: []});
-  const [currentToDo, setcurrentToDo] = useState();
   function createToDo(data)
   {
       dispatch(addItem(data));
@@ -20,12 +18,19 @@ function App() {
   function createList() {
     var components = [];
     for (var i = 0; i<toDoList.length; i++) {
-      var component = 
+      var todo = toDoList[i].todo;
+      if (toDoList[i].completed) {
+        var component = 
       <ToDoItem itemIndex={i}>
-        {toDoList[i].todo}
+        <strike>{todo}</strike>
       </ToDoItem>
-      components.push(component);
-      
+      }
+      else{
+        var component = 
+        <ToDoItem itemIndex={i}>
+          {todo}
+        </ToDoItem>}
+        components.push(component);
     }
     var list = React.createElement('div', {}, components);
     return list;
