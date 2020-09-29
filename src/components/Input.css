@@ -1,0 +1,18 @@
+.input{
+    background: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    margin-bottom: 6px;
+    margin-top:6px;
+    padding: 3px 10px;
+}
+.addButton{
+    background: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    margin-bottom: 6px;
+    margin-top:6px;
+    padding: 3px 10px;
+}

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './Input.css'
 
 export default function Input(props) {
     const [state, setstate] = useState("");
@@ -7,8 +7,8 @@ export default function Input(props) {
         <div>
             <form>
                 <label for="todo">To Do:</label>
-                <input type="text" id="todo" name="todo" onInput={(val) => setstate(val.target.value)}/>
-                <button type="button" value="Submit" onClick={() => props.handleClick(state)}/>
+                <input type="text" className="input" id="todo" name="todo" onInput={(val) => setstate(val.target.value)}/>
+                <button type="button" className="addButton" onClick={() => props.handleClick(state)}>Add</button>
             </form>
             
         </div>

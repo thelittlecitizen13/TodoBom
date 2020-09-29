@@ -32,7 +32,7 @@ function App() {
         </ToDoItem>}
         components.push(component);
     }
-    var list = React.createElement('div', {}, components);
+    var list = React.createElement('div', {className: "todo-list"}, components);
     return list;
   }
 
